@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .dark .gradient-bg {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans leading-normal tracking-normal">
+    <nav class="fixed w-full z-30 top-0 gradient-bg text-white shadow-lg">
+        <div class="container mx-auto flex flex-wrap items-center justify-between mt-0 py-4 px-4">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold tracking-wide">Adenuga David Adeleke</a>
+            </div>
+            <div class="flex items-center">
+                <!-- Dark Mode Toggle -->
+                <span  
+                    id="darkModeToggle"
+                ></span>
+
+                <div class="block lg:hidden pr-4">
+                    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray-200 hover:border-gray-200">
+                        <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-transparent text-black p-4 lg:p-0" id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a href="#about" class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4">About</a>
+                    </li>
+                    <li class="mr-3">
+                        <a href="#projects" class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Projects</a>
+                    </li>
+                    <li class="mr-3">
+                        <a href="#skills" class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Skills</a>
+                    </li>
+                    <li class="mr-3">
+                        <a href="#badges" class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Badges</a>
+                    </li>
+                    <li class="mr-3">
+                        <a href="#certificates" class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Certificates</a>
+                    </li>
+                    <li class="mr-3">
+                        <a href="#contact" class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-24 px-4">
+        <section id="hero" class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-lg">
+            <img src="/IMG_1349-removebg-preview.png" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-white shadow-lg mb-8">
+            
+            <h1 class="text-5xl font-bold mb-4">Welcome to My Portfolio, Am</h1>
+            <p id="typing-text" class="text-xl min-h-[30px]"></p>
+        </section>
+
+        <section id="about" class="section about-section my-16 bg-white dark:bg-gray-800 p-10 rounded-lg shadow-md">
+            <h2 class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">About Me</h2>
+            <div class="text-center max-w-2xl mx-auto">
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Hello! I'm Adenuga David Adeleke, a passionate individual Aiming to be a Cyber Security Technician. 
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section my-16">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="/Online Invoice Management System - Google Chrome 10_23_2024 12_34_19 PM.png" alt="Project 1" class="w-full h-50 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">Online Receipt Management System</h3>
+                        <p class="text-gray-600">this is a project that allows a company to generate receipt for customers and send it via email.</p>
+                        <a href="https://github.com/Adenuga123/online-receipt-management-system" target="_blank" class="mt-4 inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition duration-300">View Project</a>
+                    </div>
+                </div>
+                <!-- <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="dummy-image-2.jpg" alt="Project 2" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">Project Title</h3>
+                        <p class="text-gray-600">Online Receipt Management Syste, This is a placeholder text.</p>
+                        <a href="#" class="mt-4 inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition duration-300">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="dummy-image-2.jpg" alt="Project 3" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">Project Title</h3>
+                        <p class="text-gray-600">Project description goes here. This is a placeholder text.</p>
+                        <a href="#" class="mt-4 inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition duration-300">View Project</a>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+        </section>
+
+        <section id="skills" class="section skills-section my-16 bg-white p-10 rounded-lg shadow-md">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Skills</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">HTML</span>
+                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">CSS</span>
+                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">JavaScript</span>
+                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Python</span>
+                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Git</span>
+                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Networking</span>
+                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Figma</span>
+                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">MySql</span>
+            </div>
+        </section>
+
+        <section id="badges" class="section section my-16 bg-white dark:bg-gray-800 p-10 rounded-lg shadow-md">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-gray-100">Professional Badges</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://www.credly.com/badges/4b0a8977-b428-443f-b164-2188ba553f0d/public_url" target="_blank" class="badge bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-full flex items-center hover:bg-gray-200 transition duration-300">
+                    Network Defense
+                </a>
+                <a href="https://www.credly.com/badges/6826f349-902b-4305-96ca-d4b10a76701b/public_url" target="_blank" class="badge bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-full flex items-center hover:bg-gray-200 transition duration-300">
+                    Endpoint Security
+                </a>
+                <a href="https://www.credly.com/badges/590a3e22-98dc-4639-a6cb-7dac91a8079a/public_url" target="_blank" class="badge bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-full flex items-center hover:bg-gray-200 transition duration-300">
+                    Cyber Threat Management
+                </a>
+                <a href="https://www.credly.com/badges/bdb9bdca-b70c-411b-8d81-a7ff29406dc8/public_url" target="_blank" class="badge bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-full flex items-center hover:bg-gray-200 transition duration-300">
+                    Ethical Hacker
+                </a>
+            </div>
+        </section>
+        
+        <section id="certificates" class="section section my-16 bg-white dark:bg-gray-800 p-10 rounded-lg shadow-md">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-gray-100">Certificates</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="certificate-card bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Get conneted Certification</h3>
+                        <img src="/Get_Connected_certificate_adenugadavid435-gmail-com_b1e7cbc6-6a54-4f57-9fa3-38f41c23a7ed_page-0001.jpg" class="w-full h-48 object-cover mb-4">
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">2023</span>
+                    </div>
+                </div>
+                <div class="certificate-card bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Endpoint Security Certification</h3>
+                        <img src="/Endpoint_Security_Badge20241121-27-3beb13_page-0001.jpg" alt="Network Engineering Certificate" class="w-full h-48 object-cover mb-4">
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">2024</span>
+                    </div>
+                </div>
+                <div class="certificate-card bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Cyber Threat Management Certification</h3>
+                        <img src="/Cyber_Threat_Management_Badge20241121-27-kabyhw_page-0001.jpg" alt="Graphics Design Certificate" class="w-full h-48 object-cover mb-4">
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">2024</span>
+                    </div>
+                </div>
+                <div class="certificate-card bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Network Defense Certification</h3>
+                        <img src="/Network_Defense_Badge20241121-26-sc8n5s_page-0001.jpg" alt="Graphics Design Certificate" class="w-full h-48 object-cover mb-4">
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">2024</span>
+                    </div>
+                </div>
+                <div class="certificate-card bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4">Hthical Hackers Certification</h3>
+                        <img src="/Ethical_Hacker_Badge20241121-28-7a14gj_page-0001.jpg" alt="Graphics Design Certificate" class="w-full h-48 object-cover mb-4">
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        <section id="contact" class="my-16 max-w-md mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 dark:text-white">Contact</h2>
+            
+            <form id="contact-form" action="https://formspree.io/f/xyzyplzw" method="POST" class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2 dark:text-white">Name</label>
+                    <input type="text" name="name" required class="w-full px-3 py-2 border rounded dark:bg-gray-700 dark:border-gray-600">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="email" class="block mb-2 dark:text-white">Email</label>
+                    <input type="email" name="email" required class="w-full px-3 py-2 border rounded dark:bg-gray-700 dark:border-gray-600">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="message" class="block mb-2 dark:text-white">Message</label>
+                    <textarea name="message" required class="w-full px-3 py-2 border rounded h-32 dark:bg-gray-700 dark:border-gray-600"></textarea>
+                </div>
+                
+                <div class="flex justify-center">
+                    <button type="submit" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-gray-900 dark:bg-black text-white text-center py-6">
+        <p>© 2024 Adenuga David Adeleke. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
